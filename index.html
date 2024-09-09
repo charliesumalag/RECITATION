@@ -1,0 +1,391 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- use google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <title>My Digital Portfolio</title>
+    <!-- styling the page -->
+    <style>
+      /* reset */
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      html {
+        /* convert from 16px:1rem to 10px:1rem. for accurate and fast sizing */
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.6;
+        font-size: 1.4rem;
+        width: 100%;
+        height: 100vh;
+        color: #333333;
+      }
+      a,
+      li {
+        text-decoration: none;
+        color: #333333;
+        list-style-type: none;
+      }
+      /* header */
+      .header-container {
+        text-align: center;
+        padding: 5rem;
+      }
+      .name {
+        font-size: 4.2rem;
+      }
+      .list-items {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+      .list-item {
+        position: relative;
+        padding: 0 1rem;
+        font-weight: 500;
+        /* border: 1px solid red; */
+      }
+      .list-item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 1.5rem; /* Adjust the height of the vertical line */
+        background-color: #333; /* Color of the vertical line */
+      }
+      /* nav */
+      .nav-container {
+        width: 100%;
+        background-color: #333;
+        color: white;
+        padding: 2rem;
+      }
+      .nav-list {
+        width: 100%;
+        display: flex;
+        max-width: 144rem;
+        gap: 4rem;
+        /* border: 1px solid red; */
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+      }
+      .list > a {
+        color: white;
+        transition: 0.3s all ease;
+      }
+      a:hover {
+        color: rgb(226, 4, 4);
+      }
+      /* main contents */
+      .contents-wrapper {
+        width: 144rem;
+        /* border: 1px solid red; */
+        margin: 0 auto;
+      }
+      .sections-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        margin: 5rem 0;
+      }
+      .title {
+        /* border: 1px solid red; */
+        padding: 0 0 1rem 0;
+        position: relative;
+        margin-bottom: 1rem;
+        font-size: 2.6rem;
+      }
+      .title:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: #333;
+      }
+      .training-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .training-titles {
+        font-weight: 700;
+        color: #333333d8;
+      }
+      .skill-lists {
+        /* border: 1px solid black; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 1rem;
+      }
+      .tech-stack-list {
+        flex: 1 1 30%;
+        padding: 1.2rem;
+        margin: 1rem;
+        gap: 0.8rem;
+      }
+      .title-list-container {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 1.2rem;
+      }
+      .bar {
+        width: 100%;
+        height: 1.2rem;
+        border: 1px solid #333;
+        margin-top: 1rem;
+      }
+      .inner-bar {
+        display: inline-block;
+
+        height: 1.1rem;
+        background-color: #333;
+        /* border: 1px solid #333; */
+        /* border: 1px solid red; */
+      }
+      i {
+        font-size: 2.8rem;
+      }
+      /* footer */
+      footer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        background-color: #333;
+        color: white;
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="header-container">
+      <h1 class="name">Charlie P. Sumalag</h1>
+      <div class="positions-desired">
+        <ul class="list-items">
+          <li class="list-item">Front End Web Developer</li>
+          <li class="list-item">Back End Web Developer</li>
+          <li class="list-item">Full Stack Web Developer</li>
+        </ul>
+      </div>
+    </header>
+    <!-- end header -->
+    <!-- navigation start -->
+    <nav class="nav-container">
+      <ul class="nav-list">
+        <li class="list"><a href="#goal">Goals</a></li>
+        <li class="list"><a href="#training-seminar">Training/Seminar</a></li>
+        <li class="list"><a href="#work-experience">Work Experience</a></li>
+        <li class="list"><a href="#skills">Skills</a></li>
+        <li class="list">
+          <a href="#educational-background">Educational Background</a>
+        </li>
+        <li class="list">
+          <a href="#personal-information">Personal Informmation</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- navigation end -->
+    <!-- main content -->
+    <div class="contents-wrapper">
+      <!-- start of sections -->
+      <div class="sections-container">
+        <section class="goal-section" id="goal">
+          <h2 class="title">Goals</h2>
+          <p class="par-goal">
+            As an aspiring web developer, my goal is to build a strong
+            foundation in both front-end and back-end technologies, while
+            continuously expanding my knowledge and skills. I aim to create
+            responsive, user-friendly websites and applications by mastering key
+            technologies like HTML, CSS, JavaScript, and PHP. Additionally, I am
+            committed to following best practices, improving code quality, and
+            staying updated with the latest industry trends. Ultimately, I seek
+            opportunities to work on meaningful projects that make a positive
+            impact and further my growth in the field.
+          </p>
+        </section>
+        <section class="training-section" id="training-seminar">
+          <h2 class="title">Training/Seminars</h2>
+          <ul class="training-list">
+            <li class="each-list-training">
+              <span class="training-titles">Responsive Web Design</span>
+              - FreeCodeCamp (2022)
+            </li>
+            <li class="each-list-training">
+              <span class="training-titles"
+                >Build Responsive Real-World Websites with HTML and CSS (Jonas
+                Schmedtmann)</span
+              >
+              - Paid Udemy Course (2023)
+            </li>
+            <li class="each-list-training">
+              <span class="training-titles"
+                >CCNAv7: Introduction to Networks</span
+              >
+              - Cisco Networking Academy(2024)
+            </li>
+            <li class="each-list-training">
+              <span class="training-titles"
+                >PHP From Scratch | Beginner to Advance (Brad Traversy)</span
+              >
+              - Paid Udemy Courses (On progress)
+            </li>
+            <li class="each-list-training">
+              <span class="training-titles"
+                >Complete Web Design | From Figma to Webflow to Freelancing
+                (Vako Shvili)</span
+              >
+              - Paid Udemy Courses (On progress)
+            </li>
+          </ul>
+        </section>
+        <section class="work-experience" id="work-experience">
+          <h2 class="title">Work Experience</h2>
+          <ul-work-list>
+            <li class="each-list-work">
+              <span class="training-titles">Sale Personnel</span> - Royal Dragon
+              Tranders Inc (2016 - 2021)
+            </li>
+            <li class="each-list-work">
+              <span class="training-titles"
+                >Freelancer Grab Food Delivery Rider
+              </span>
+              (2021 - Present)
+            </li>
+          </ul-work-list>
+        </section>
+        <section class="skills" id="skills">
+          <h2 class="title">Skills</h2>
+          <ul class="skill-lists">
+            <li class="tech-stack-list">
+              <div class="title-list-container">
+                <span><i class="fa-brands fa-html5"></i></span>HTML
+              </div>
+              <div class="bar">
+                <span class="inner-bar" style="width: 85%"></span>
+              </div>
+            </li>
+            <li class="tech-stack-list">
+              <div class="title-list-container">
+                <span><i class="fa-brands fa-css3"></i></span>CSS
+              </div>
+              <div class="bar">
+                <span class="inner-bar" style="width: 85%"></span>
+              </div>
+            </li>
+            <li class="tech-stack-list">
+              <div class="title-list-container">
+                <span><i class="fa-brands fa-js"></i></span>JavaScript
+              </div>
+              <div class="bar">
+                <span class="inner-bar" style="width: 82%"></span>
+              </div>
+            </li>
+            <li class="tech-stack-list">
+              <div class="title-list-container">
+                <span><i class="fa-brands fa-php"></i></span>PHP
+              </div>
+              <div class="bar">
+                <span class="inner-bar" style="width: 75%"></span>
+              </div>
+            </li>
+            <li class="tech-stack-list">
+              <div class="title-list-container">
+                <span><i class="fa-solid fa-database"></i></span>MySQL
+              </div>
+              <div class="bar">
+                <span class="inner-bar" style="width: 75%"></span>
+              </div>
+            </li>
+            <li class="tech-stack-list">
+              <div class="title-list-container">
+                <span><i class="fa-brands fa-github"></i></span>Github/Git
+              </div>
+              <div class="bar">
+                <span class="inner-bar" style="width: 82%"></span>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="educational-background" id="educational-background">
+          <h2 class="title">Educational Background</h2>
+          <ul class="education-lists">
+            <li class="education-list">
+              <span class="training-titles">
+                Bayugan Central Elementary School
+              </span>
+              - Primary (2006)
+            </li>
+            <li class="education-list">
+              <span class="training-titles">
+                Cantapoy National High School </span
+              >- Secondary (2010)
+            </li>
+            <li class="education-list">
+              <span class="training-titles">
+                Informatics Computer Institute
+              </span>
+              - Undergraduate : Bachelor of Science in Information Technology
+              (2013)
+            </li>
+            <li class="education-list">
+              <span class="training-titles"> ICCT Colleges </span> - Bachelor of
+              Science in Information Technology (Present)
+            </li>
+          </ul>
+        </section>
+        <section class="personal-information" id="personal-information">
+          <h2 class="title">Perosnal Information</h2>
+          <ul class="personal-information-lists">
+            <li class="personal-information-list">
+              <span class="training-titles">Name</span>: Sumalag, Charlie P.
+            </li>
+            <li class="personal-information-list">
+              <span class="training-titles"> Email</span>:
+              charlie444@yahoo.com.ph
+            </li>
+            <li class="personal-information-list">
+              <span class="training-titles">Phone</span>: 0946-729-3001
+            </li>
+            <li class="personal-information-list">
+              <span class="training-titles"> Location</span>: Rizal, Philippines
+            </li>
+          </ul>
+        </section>
+      </div>
+      <!-- end of section -->
+    </div>
+    <footer>
+      <p class="footer-par">
+        &copy; 2024 Charlie P. Sumalag. All Rights Reserved.
+      </p>
+    </footer>
+  </body>
+</html>
